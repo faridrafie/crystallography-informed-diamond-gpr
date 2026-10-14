@@ -1,0 +1,16 @@
+feature_name,feature_type,h,k,l,definition
+d_axis_0_0_1_deg,axis_distance,0,0,1,Angular distance between implantation beam and fixed exact crystallographic axis.
+d_axis_1_0_3_deg,axis_distance,1,0,3,Angular distance between implantation beam and fixed exact crystallographic axis.
+d_axis_1_1_3_deg,axis_distance,1,1,3,Angular distance between implantation beam and fixed exact crystallographic axis.
+d_axis_1_0_2_deg,axis_distance,1,0,2,Angular distance between implantation beam and fixed exact crystallographic axis.
+d_plane_1_0_0_deg,plane_family_distance,1,0,0,Minimum angular distance between implantation beam and any symmetry-equivalent branch of the fixed plane family.
+d_plane_1_1_0_deg,plane_family_distance,1,1,0,Minimum angular distance between implantation beam and any symmetry-equivalent branch of the fixed plane family.
+d_plane_2_0_1_deg,plane_family_distance,2,0,1,Minimum angular distance between implantation beam and any symmetry-equivalent branch of the fixed plane family.
+d_plane_2_1_0_deg,plane_family_distance,2,1,0,Minimum angular distance between implantation beam and any symmetry-equivalent branch of the fixed plane family.
+d_plane_2_1_1_deg,plane_family_distance,2,1,1,Minimum angular distance between implantation beam and any symmetry-equivalent branch of the fixed plane family.
+d_plane_2_2_1_deg,plane_family_distance,2,2,1,Minimum angular distance between implantation beam and any symmetry-equivalent branch of the fixed plane family.
+d_plane_3_0_1_deg,plane_family_distance,3,0,1,Minimum angular distance between implantation beam and any symmetry-equivalent branch of the fixed plane family.
+d_plane_3_1_0_deg,plane_family_distance,3,1,0,Minimum angular distance between implantation beam and any symmetry-equivalent branch of the fixed plane family.
+d_plane_3_1_1_deg,plane_family_distance,3,1,1,Minimum angular distance between implantation beam and any symmetry-equivalent branch of the fixed plane family.
+d_plane_3_2_0_deg,plane_family_distance,3,2,0,Minimum angular distance between implantation beam and any symmetry-equivalent branch of the fixed plane family.
+d_plane_3_2_1_deg,plane_family_distance,3,2,1,Minimum angular distance between implantation beam and any symmetry-equivalent branch of the fixed plane family.

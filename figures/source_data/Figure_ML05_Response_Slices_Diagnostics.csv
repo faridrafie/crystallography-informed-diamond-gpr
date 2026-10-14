@@ -1,0 +1,5 @@
+target,optimized_kernel,convergence_warnings
+depth,"1.91**2 * RBF(length_scale=[2.99, 0.803]) + WhiteKernel(noise_level=0.00875)",0
+shallow,"0.895**2 * RBF(length_scale=[1.03, 0.702]) + WhiteKernel(noise_level=0.0147)",0
+sp2,"1.61**2 * RBF(length_scale=[1.02, 0.608]) + WhiteKernel(noise_level=0.0216)",0
+vacancy,"2.33**2 * RBF(length_scale=[3.26, 0.894]) + WhiteKernel(noise_level=0.00355)",0

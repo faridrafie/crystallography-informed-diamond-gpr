@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this research code or processed dataset, please cite the associated manuscript and the archived software release."
+title: "Crystallography-Informed Gaussian-Process Surrogate Modeling of Low-Energy Nitrogen Implantation in Diamond"
+type: software
+authors:
+  - family-names: "Rafie"
+    given-names: "Seyed Faridedin"
+    affiliation: "Materials Science and Engineering Department, University of Wisconsin-Milwaukee, Milwaukee, WI 53211, USA"
+version: "1.0.0-rc1"
+keywords:
+  - nitrogen implantation
+  - diamond
+  - Gaussian process regression
+  - molecular dynamics
+  - surrogate modeling
+  - crystallography
+  - nitrogen-vacancy centers
+
+license: MIT

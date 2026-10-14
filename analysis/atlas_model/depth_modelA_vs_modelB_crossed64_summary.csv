@@ -1,0 +1,2 @@
+target,n_test,modelA_MAE,modelB_MAE,modelA_RMSE,modelB_RMSE,modelA_R2,modelB_R2,modelB_MAE_reduction_percent,modelB_RMSE_reduction_percent,modelA_point_wins,modelB_point_wins,ties,modelA_convergence_warnings,modelB_convergence_warnings
+p1_depth_median_nm,64,0.47747190824908864,0.4584089789104747,0.644282398626664,0.6469259412648284,0.9442246763248952,0.9437660360304088,3.9924713913575682,-0.41030806425866384,26,38,0,0,0

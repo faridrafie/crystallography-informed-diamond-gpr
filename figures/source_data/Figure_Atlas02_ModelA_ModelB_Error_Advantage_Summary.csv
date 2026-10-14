@@ -1,0 +1,5 @@
+target,n,modelA_point_wins,modelB_point_wins,ties,mean_delta_abs_error_A_minus_B,median_delta_abs_error_A_minus_B,largest_modelB_advantage,largest_modelB_advantage_energy_keV,largest_modelB_advantage_tilt_deg,largest_modelA_advantage,largest_modelA_advantage_energy_keV,largest_modelA_advantage_tilt_deg
+median_depth,64,26,38,0,0.019062929338613952,0.025754886908960134,0.7387691406591338,4.0,25.0,-0.6283696369029454,4.0,3.0
+shallow_fraction,64,32,32,0,-0.004895694898746565,-0.0004286010187513048,0.044208312750163306,3.5,18.43,-0.0767937475439473,3.5,15.0
+near_surface_sp2,64,38,26,0,-0.0002633765827850425,-4.3151745826910506e-05,0.0006519604513304001,2.0,18.43,-0.0027074784978648003,3.5,15.0
+vacancy_count,64,23,41,0,2.7295471354294087,1.7861704026996603,18.184398788359005,3.0,25.0,-10.054617985706072,1.0,18.43

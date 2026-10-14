@@ -1,0 +1,32 @@
+FROZEN ATLAS-V2 GEOMETRY NORMALIZATION
+======================================
+
+The 15 crystallographic Atlas features are NOT
+standardized using the phi=0 MD training data.
+
+Instead, each feature is normalized using its mean
+and population standard deviation over the fixed
+geometry-only orientation domain:
+
+    theta = 0 to 30 deg
+    phi   = 0 to 45 deg
+
+using the pre-defined 0.25-deg orientation grid.
+
+Reason
+------
+Some crystallographic features are constant on the
+current phi=0 MD slice but vary strongly when phi is
+nonzero.
+
+Training-slice normalization would therefore produce
+an ill-defined or misleading scale for later azimuth
+predictions.
+
+The geometry-domain scaler contains no MD response
+information and is frozen before any phi != 0 MD
+outcome is evaluated.
+
+Energy is NOT included in this scaler.
+Energy preprocessing remains part of each ML
+training fold.

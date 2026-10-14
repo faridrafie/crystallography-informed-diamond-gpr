@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.bak
+~$*
+
+# Local large-data folders (not part of the manuscript repository)
+raw_md/
+md_runs/
+06_azimuth_test/

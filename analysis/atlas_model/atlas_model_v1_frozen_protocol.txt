@@ -1,0 +1,122 @@
+ATLAS MODEL V1 — FROZEN BEFORE AZIMUTH EVALUATION
+=================================================
+
+Purpose
+-------
+Evaluate whether a crystallographic representation
+can replace raw orientation coordinates and support
+generalization beyond the original phi = 0 MD slice.
+
+MODEL A
+-------
+Inputs:
+    E
+    theta
+
+MODEL B
+-------
+Inputs:
+    E
+
+    4 fixed axis-distance features:
+        d_[001]
+        d_[103]
+        d_[113]
+        d_[102]
+
+    11 fixed plane-family-distance features:
+        d_{100}
+        d_{110}
+        d_{201}
+        d_{210}
+        d_{211}
+        d_{221}
+        d_{301}
+        d_{310}
+        d_{311}
+        d_{320}
+        d_{321}
+
+Raw theta and raw phi are not supplied to Model B.
+
+Important:
+    d_[001] is geometrically identical to tilt theta.
+    Therefore Model B retains tilt information through
+    the crystallographic representation.
+
+ATLAS FEATURE NORMALIZATION
+---------------------------
+The 15 Atlas features are normalized using fixed
+geometry-only statistics from:
+
+    theta = 0 to 30 deg
+    phi   = 0 to 45 deg
+
+on the pre-defined 0.25-deg orientation grid.
+
+No MD response value is used in this normalization.
+
+ENERGY NORMALIZATION
+--------------------
+Energy is standardized independently inside each
+training fold.
+
+GPR ARCHITECTURE
+----------------
+Kernel:
+
+    Constant
+    x
+    Grouped RBF
+    +
+    White noise
+
+Grouped RBF contains two optimized characteristic
+length scales:
+
+    l_E        : energy
+    l_geometry : entire crystallographic representation
+
+GPR settings:
+
+    normalize_y = True
+    optimizer restarts = 8
+    random state = 42
+
+PHI=0 QUALIFICATION BENCHMARK
+-----------------------------
+Common interior crossed energy-angle holdout:
+
+    held energies:
+        1.0 to 4.5 keV
+
+    held angles:
+        3, 7, 10, 15, 18.43, 20, 22, 25 deg
+
+For each target point (E*, theta*):
+
+    remove all conditions with E = E*
+    AND all conditions with theta = theta*
+
+Training conditions per fold:
+    81
+
+Test conditions:
+    64 total per target
+
+TARGETS
+-------
+    median implantation depth
+    shallow fraction
+    near-surface sp2 fraction
+    vacancy count
+
+FREEZE RULE
+-----------
+The Atlas representation, geometry scaler, grouped GPR
+architecture, and phi=0 qualification protocol were fixed
+before response-specific predictive comparisons.
+
+MD response values were not used to select or redefine Atlas
+axis families, plane families, or geometry-domain normalization
+statistics.

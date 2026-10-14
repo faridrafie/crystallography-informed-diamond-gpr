@@ -1,0 +1,5 @@
+target,optimized_kernel,prediction_mean_min,prediction_mean_max,prediction_std_min,prediction_std_max,convergence_warnings
+depth,"1.91**2 * RBF(length_scale=[2.99, 0.803]) + WhiteKernel(noise_level=0.00875)",0.3704782566749385,19.07320971721785,0.37149559532393583,0.46495252459594577,0
+shallow,"0.895**2 * RBF(length_scale=[1.03, 0.702]) + WhiteKernel(noise_level=0.0147)",0.06331867435933236,1.0327835382906558,0.0404608179169991,0.04953857934878717,0
+sp2,"1.61**2 * RBF(length_scale=[1.02, 0.608]) + WhiteKernel(noise_level=0.0216)",0.002436647678214627,0.020690367288156708,0.000711613911649103,0.0009706784477670038,0
+vacancy,"2.33**2 * RBF(length_scale=[3.26, 0.894]) + WhiteKernel(noise_level=0.00355)",30.239223092242895,396.05601021214875,5.905542985943895,7.618992048154204,0

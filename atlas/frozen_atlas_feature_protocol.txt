@@ -1,0 +1,87 @@
+FROZEN ATLAS-V2 CRYSTALLOGRAPHIC REPRESENTATION
+================================================
+
+Purpose
+-------
+Replace raw orientation coordinates with a fixed
+crystallographic geometric representation that is
+defined consistently for both phi = 0 and phi != 0.
+
+Model A
+-------
+Inputs:
+    E
+    theta
+
+Model B
+-------
+Inputs:
+    E
+
+    Axis distances:
+        d_[001]
+        d_[103]
+        d_[113]
+        d_[102]
+
+    Plane-family distances:
+        d_{100}
+        d_{110}
+        d_{201}
+        d_{210}
+        d_{211}
+        d_{221}
+        d_{301}
+        d_{310}
+        d_{311}
+        d_{320}
+        d_{321}
+
+Raw theta and raw phi are NOT supplied to Model B.
+
+Important:
+    d_[001] is geometrically identical to tilt theta.
+    Therefore Model B does retain tilt information,
+    but through the crystallographic representation.
+
+Axis-selection rule
+-------------------
+Start from Atlas-V2 exact axes with index_norm <= 4.
+
+Retain exact axes whose canonical orientation lies
+inside:
+
+    theta = 0 to 30 deg
+    phi   = 0 to 45 deg
+
+This yields:
+
+    [001]
+    [103]
+    [113]
+    [102]
+
+Plane-selection rule
+--------------------
+Start from Atlas-V2 exact plane families with
+index_norm <= 4.
+
+Retain families whose symmetry-equivalent planar
+trace enters:
+
+    theta = 0 to 30 deg
+    phi   = 0 to 45 deg
+
+This yields 11 plane families.
+
+Methodological guardrails
+-------------------------
+1. No MD response target was used for feature selection.
+2. No azimuth-MD outcome was used for feature selection.
+3. No cutoff-dependent nearest-axis descriptor is used.
+4. No exact-axis structural descriptor is copied onto
+   an arbitrary nearby orientation.
+5. Axis and plane features are geometric angular
+   relationships only.
+6. The representation is frozen before evaluating
+   phi != 0 molecular-dynamics results.

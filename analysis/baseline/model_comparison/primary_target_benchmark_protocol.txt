@@ -1,0 +1,88 @@
+PRIMARY TARGET BENCHMARK — FROZEN BASELINE
+==========================================
+
+Dataset
+-------
+Condition-level MD dataset:
+master_condition_table_core.csv
+
+Grid:
+10 energies x 10 angles = 100 conditions.
+
+Primary outputs
+---------------
+1. Median implantation depth
+2. Fraction of implanted nitrogen within 0–5 nm
+3. Near-surface sp2 fraction within 0–2 nm
+4. Vacancy count
+
+Validation protocol
+-------------------
+Common interior crossed energy-angle holdout.
+
+Interior test energies:
+1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0, 4.5 keV
+
+Interior test angles:
+3, 7, 10, 15, 18.43, 20, 22, 25 degrees
+
+Number of common test targets:
+8 x 8 = 64
+
+For each crossed target (E*, A*):
+- remove every condition with E = E*
+- remove every condition with A = A*
+- training set therefore contains 81 conditions
+- predict only the crossed target (E*, A*)
+
+GPR
+---
+Inputs:
+Energy and angle.
+
+Input preprocessing:
+StandardScaler fit on training data only.
+
+Kernel:
+ConstantKernel * ARD RBF + WhiteKernel
+
+normalize_y:
+True
+
+Optimizer restarts:
+8
+
+PCHIP
+-----
+Deterministic two-path interpolation.
+
+Path 1:
+Energy -> Angle
+
+Path 2:
+Angle -> Energy
+
+Final prediction:
+average of both paths.
+
+PCHIP is evaluated only on interior targets.
+No extrapolation is allowed.
+
+Comparison rule
+---------------
+GPR and PCHIP are compared only on the exact same
+64 interior crossed targets.
+
+No clipping of predictions is used.
+
+Interpretation
+--------------
+MAE, RMSE, and R2 are reported separately.
+
+A statement that one model "consistently reduces
+prediction error" is only justified for a named
+metric if that metric improves across all outputs.
+
+The current benchmark should therefore distinguish
+MAE from RMSE rather than using an unqualified
+generic prediction-error claim.

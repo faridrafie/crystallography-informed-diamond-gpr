@@ -1,0 +1,25 @@
+result_group,model,metric,expected_value
+crossed_depth,GPR,MAE,0.4774719082490886
+crossed_depth,GPR,RMSE,0.644282398626664
+crossed_depth,GPR,R2,0.9442246763248952
+crossed_depth,PCHIP,MAE,0.529064714125813
+crossed_depth,PCHIP,RMSE,0.780338
+crossed_depth,PCHIP,R2,0.918181
+crossed_shallow,GPR,MAE,0.0468513431272977
+crossed_shallow,GPR,RMSE,0.0632342022958973
+crossed_shallow,GPR,R2,0.9470837659641536
+crossed_sp2,GPR,MAE,0.0013687349514601
+crossed_sp2,GPR,RMSE,0.001748770133567
+crossed_sp2,GPR,R2,0.7220989698420213
+crossed_vacancy,GPR,MAE,9.569632392568431
+crossed_vacancy,GPR,RMSE,12.29842701469584
+crossed_vacancy,GPR,R2,0.9739350555069284
+atlas_depth,Model B,MAE,0.4584089789104747
+atlas_shallow,Model B,MAE,0.0517470380260443
+atlas_sp2,Model B,MAE,0.0016321115342451
+atlas_vacancy,Model B,MAE,6.840085257139022
+atlas_vacancy,Model B,R2,0.9857458555987374
+LOAO_interior,GPR,MAE,0.49
+LOAO_edge,GPR,MAE,1.392
+LOEO_interior,GPR,MAE,0.256
+LOEO_edge,GPR,MAE,0.621
