@@ -6,7 +6,7 @@ authors:
   - family-names: "Rafie"
     given-names: "Seyed Faridedin"
     affiliation: "Materials Science and Engineering Department, University of Wisconsin-Milwaukee, Milwaukee, WI 53211, USA"
-version: "1.0.0-rc1"
+version: "1.0.0"
 keywords:
   - nitrogen implantation
   - diamond
