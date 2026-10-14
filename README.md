@@ -1,4 +1,5 @@
 # Crystallography-Informed Gaussian-Process Surrogate Modeling of Low-Energy Nitrogen Implantation in Diamond
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23376495.svg)](https://doi.org/10.5281/zenodo.23376495)
 
 **Research code and processed data by Seyed Faridedin Rafie (Farid Rafie)**  
 Materials Science and Engineering Department, University of Wisconsin-Milwaukee, Milwaukee, WI 53211, USA  
